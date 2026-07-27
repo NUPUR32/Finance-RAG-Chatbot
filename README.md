@@ -1,6 +1,6 @@
 # 📊 Finance RAG Chatbot
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://finance-rag-chatbot-nupur32.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app/)
 
 An interactive **Retrieval-Augmented Generation (RAG)** chatbot built with **Streamlit**, **LangChain**, **FAISS**, and **Groq Cloud API** (running Llama-3.1-8b-instant). It allows users to ask financial questions and retrieve precise answers sourced directly from the annual reports of **Apple, Amazon, Google, NVIDIA, and Tesla**.
 
@@ -8,7 +8,7 @@ An interactive **Retrieval-Augmented Generation (RAG)** chatbot built with **Str
 
 ## 🚀 Live Demo
 Access the live application directly on Streamlit Community Cloud:
-👉 **[finance-rag-chatbot-nupur32.streamlit.app](https://finance-rag-chatbot-nupur32.streamlit.app/)**
+👉 **[finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app](https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app/)**
 
 ---
 
