@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from groq import Groq
 from langchain_community.vectorstores import FAISS
@@ -39,7 +40,7 @@ embedding_model = load_embedding()
 @st.cache_resource
 def load_vector_db():
     return FAISS.load_local(
-        "vector_db",
+        "Vector_db",
         embedding_model,
         allow_dangerous_deserialization=True
     )
@@ -50,8 +51,19 @@ vector_db = load_vector_db()
 # Groq Client
 # -----------------------------
 
+# Try to get API key from environment or streamlit secrets
+api_key = os.environ.get("GROQ_API_KEY") or (st.secrets.get("GROQ_API_KEY") if "GROQ_API_KEY" in st.secrets else None)
+
+if not api_key:
+    st.sidebar.markdown("### 🔑 API Configuration")
+    api_key = st.sidebar.text_input("Enter Groq API Key:", type="password")
+    st.sidebar.info("You can get a Groq API Key from [console.groq.com](https://console.groq.com/).")
+    if not api_key:
+        st.warning("Please enter your Groq API Key in the sidebar or configure it in secrets to start chatting.")
+        st.stop()
+
 client = Groq(
-    api_key="YOUR_GROQ_API_KEY"
+    api_key=api_key
 )
 
 # -----------------------------
