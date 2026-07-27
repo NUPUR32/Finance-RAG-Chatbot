@@ -173,19 +173,35 @@ https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app
 
 # 📸 Screenshots
 
-Add screenshots here.
+## 🏠 Home Page
 
-```
-Home Screen
+<p align="center">
+  <img src="screenshots/Home.png" width="900"/>
+</p>
 
-Chat Interface
+---
 
-Financial Question
+## 💬 Chat Interface
 
-Retrieved Sources
+<p align="center">
+  <img src="screenshots/Chat.png" width="900"/>
+</p>
 
-Response with Citations
-```
+---
+
+## 🤖 AI Response
+
+<p align="center">
+  <img src="screenshots/Answer.png" width="900"/>
+</p>
+
+---
+
+## 📚 Source Citations
+
+<p align="center">
+  <img src="screenshots/Sources.png" width="900"/>
+</p>
 
 ---
 
