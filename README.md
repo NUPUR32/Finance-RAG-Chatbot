@@ -1,64 +1,231 @@
-# 📊 Finance RAG Chatbot
+<div align="center">
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app/)
+# 🌌 Finance RAG Chatbot
+### *AI-Powered Financial Intelligence using Retrieval-Augmented Generation*
 
-An interactive **Retrieval-Augmented Generation (RAG)** chatbot built with **Streamlit**, **LangChain**, **FAISS**, and **Groq Cloud API** (running Llama-3.1-8b-instant). It allows users to ask financial questions and retrieve precise answers sourced directly from the annual reports of **Apple, Amazon, Google, NVIDIA, and Tesla**.
+<p align="center">
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=26&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=Financial+AI+Assistant;Retrieval-Augmented+Generation+(RAG);Semantic+Search+over+Annual+Reports;Powered+by+Groq+%2B+Llama+3.1+%2B+FAISS" />
+</p>
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-green?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/FAISS-VectorDB-orange?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq-Llama--3.1-purple?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
+
+</p>
 
 ---
 
-## 🚀 Live Demo
-Access the live application directly on Streamlit Community Cloud:
-👉 **[finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app](https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app/)**
+## 🚀 Overview
+
+Finance RAG Chatbot is an AI-powered financial assistant that combines **Retrieval-Augmented Generation (RAG)** with **Large Language Models** to answer financial questions using **official annual reports** instead of relying only on pretrained model knowledge.
+
+The application indexes company reports into a semantic vector database and retrieves the most relevant information before generating responses. This approach significantly improves factual accuracy, reduces hallucinations, and provides transparent answers with document citations.
+
+Currently, the chatbot supports annual reports from:
+
+- 🍎 Apple
+- 📦 Amazon
+- 🌐 Google
+- 💚 NVIDIA
+- 🚗 Tesla
 
 ---
 
-## 🛠️ Features
-- **Retrieval-Augmented Generation (RAG):** Combines the generation capabilities of Large Language Models (LLMs) with document retrieval.
-- **Accurate Grounding:** Restricts model responses strictly to the facts provided in the official financial documents.
-- **Source Citation:** Automatically lists the source documents and page numbers where the information was found.
-- **Vector Database:** Uses **FAISS** with `sentence-transformers/all-MiniLM-L6-v2` embeddings for fast semantic lookup.
-- **Groq LLM Acceleration:** Leverages **Llama-3.1-8b-instant** on Groq for ultra-fast response times.
+# ✨ Features
+
+- 🧠 Retrieval-Augmented Generation (RAG)
+- 📚 Semantic search using FAISS
+- ⚡ Ultra-fast inference with Groq Cloud
+- 🤖 Llama-3.1-8B-Instant
+- 📄 Source citations with page numbers
+- 💬 Natural language financial Q&A
+- 🌙 Modern Streamlit interface
+- 🔍 Context-aware document retrieval
+- 📈 Enterprise-grade financial document search
 
 ---
 
-## 💻 Local Setup & Execution
+# 🏗 Architecture
 
-### 1. Clone the Repository
+```text
+                User Question
+                      │
+                      ▼
+            Sentence Embeddings
+                      │
+                      ▼
+              FAISS Vector Search
+                      │
+                      ▼
+        Relevant Financial Chunks
+                      │
+                      ▼
+          Llama-3.1 (Groq Cloud)
+                      │
+                      ▼
+     Accurate Financial Response
+            + Source Citations
+```
+
+---
+
+# ⚙ Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend |
+| Streamlit | Web Application |
+| LangChain | RAG Pipeline |
+| FAISS | Vector Database |
+| HuggingFace Embeddings | Text Embeddings |
+| Groq Cloud | LLM Inference |
+| Llama-3.1-8B-Instant | Language Model |
+
+---
+
+# 📂 Project Structure
+
+```
+Finance-RAG-Chatbot/
+│
+├── app.py
+├── requirements.txt
+├── Data/
+│   ├── Apple.pdf
+│   ├── Amazon.pdf
+│   ├── Google.pdf
+│   ├── NVIDIA.pdf
+│   └── Tesla.pdf
+├── vectorstore/
+├── .env.example
+└── README.md
+```
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
 ```bash
 git clone https://github.com/NUPUR32/Finance-RAG-Chatbot.git
+
 cd Finance-RAG-Chatbot
 ```
 
-### 2. Install Dependencies
-Ensure you have Python 3.8+ installed. Install the required Python packages:
+Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure API Key
-Create a `.env` file in the root directory (using `.env.example` as a template):
-```env
-GROQ_API_KEY=your_actual_groq_api_key_here
-```
-Or export it as an environment variable in your terminal:
-- **Windows (PowerShell):** `$env:GROQ_API_KEY="your_key"`
-- **Linux/macOS:** `export GROQ_API_KEY="your_key"`
+Create a `.env`
 
-### 4. Run the Streamlit Application
+```env
+GROQ_API_KEY=your_api_key_here
+```
+
+Run the application
+
 ```bash
 streamlit run app.py
 ```
 
 ---
 
-## ☁️ Deploying to Streamlit Community Cloud
+# 💬 Example Questions
 
-To deploy this app yourself:
-1. Fork this repository to your GitHub account.
-2. Go to [share.streamlit.io](https://share.streamlit.io/) and log in with GitHub.
-3. Click **New app**, select your repository, branch (`main`), and main file path (`app.py`).
-4. In **Advanced Settings**, add your `GROQ_API_KEY` under the secrets section:
-   ```toml
-   GROQ_API_KEY = "your_actual_groq_api_key_here"
-   ```
-5. Click **Deploy**!
+- Compare Apple's revenue growth over the past year.
+- What are Tesla's major business risks?
+- How much did NVIDIA spend on R&D?
+- Summarize Amazon's operating income.
+- What are Google's biggest revenue segments?
+- Which company has the highest gross margin?
+- Explain Apple's cash flow performance.
+- What risks are highlighted in Tesla's annual report?
+
+---
+
+# 📊 Why RAG?
+
+| Traditional Chatbot | Finance RAG Chatbot |
+|---------------------|--------------------|
+| Generic responses | Grounded answers |
+| Hallucinations | Evidence-backed |
+| No references | Source citations |
+| Static knowledge | Annual report retrieval |
+| Less reliable | High factual accuracy |
+
+---
+
+# 🌍 Live Demo
+
+🚀 **Streamlit Cloud**
+
+https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here.
+
+```
+Home Screen
+
+Chat Interface
+
+Financial Question
+
+Retrieved Sources
+
+Response with Citations
+```
+
+---
+
+# 🔮 Future Roadmap
+
+- 📈 Real-time stock market integration
+- 📰 Financial news retrieval
+- 📊 Interactive charts
+- 📉 Portfolio analytics
+- 📑 SEC filing support
+- 🌐 Multi-company comparison
+- 🤖 Multi-agent financial assistant
+- 🎤 Voice interaction
+- ☁ Cloud deployment
+- 📱 Mobile-friendly interface
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push the branch
+5. Open a Pull Request
+
+---
+
+# 📜 License
+
+Licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project helpful, consider giving it a Star!
+
+**Made with ❤️ using Streamlit, LangChain, FAISS, Groq, and Llama 3.1**
+
+</div>
