@@ -178,7 +178,7 @@ https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app
 <p align="center">
   <img src="screenshots/Home.png" width="900"/>
 </p>
-
+The Finance RAG Chatbot provides a clean and intuitive interface where users can interact with an AI-powered financial assistant. Built with Streamlit, the dashboard enables seamless access to financial insights through natural language queries.
 ---
 
 ## 💬 Chat Interface
@@ -186,7 +186,7 @@ https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app
 <p align="center">
   <img src="screenshots/Chat.png" width="900"/>
 </p>
-
+Users can ask questions about company performance, revenue, expenses, risks, cash flow, business strategies, and other financial metrics. The chatbot understands natural language and retrieves the most relevant information from official annual reports.
 ---
 
 ## 🤖 AI Response
@@ -194,7 +194,7 @@ https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app
 <p align="center">
   <img src="screenshots/Answer.png" width="900"/>
 </p>
-
+The chatbot generates accurate, context-aware answers by combining semantic document retrieval with the Llama 3.1 language model. Responses are grounded in retrieved financial documents, minimizing hallucinations and improving reliability.
 ---
 
 ## 📚 Source Citations
@@ -202,7 +202,7 @@ https://finance-rag-chatbot-4ewq4adtysckmxejd2pfcb.streamlit.app
 <p align="center">
   <img src="screenshots/Sources.png" width="900"/>
 </p>
-
+Every response includes the supporting document sources and page numbers from the indexed annual reports. This evidence-based approach ensures transparency, enables users to verify information, and builds trust in the generated answers.
 ---
 
 # 🔮 Future Roadmap
